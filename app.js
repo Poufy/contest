@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const mongoUrl = require("./config");
 //Importing routes
 const teamRoute = require("./api/routes/team");
+// const landingPageRoute = require("./api/routes/landingPage")
 
 
 //Establishing a connection with the mongodb server.
@@ -43,6 +44,9 @@ app.use((req, res, next) => {
 });
 
 //Any request to the http server will direct us to the Action folder first hence in action.js our get path is only /
+app.get('/',function(req,res) {
+  res.sendFile(__dirname + '/index.html');
+});
 app.use("/api/teams" , teamRoute);
 
 //if you reach this line that means no router in products or orders was able to handle the request therefore we catch an error here

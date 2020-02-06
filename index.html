@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <title>ACM programming championship registeration</title>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+      html, body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      }
+      form {
+      border: 5px solid #f1f1f1;
+      }
+      input[type=text], input[type=password] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      }
+      .icon {
+      font-size: 110px;
+      display: flex;
+      justify-content: center;
+      color: #4286f4;
+      }
+      button {
+      background-color: #4286f4;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: grab;
+      width: 48%;
+      }
+      h1 {
+      text-align:center;
+      fone-size:18;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .formcontainer {
+      text-align: center;
+      margin: 24px 50px 12px;
+      }
+      .container {
+      padding: 16px 0;
+      text-align:left;
+      }
+      span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+      }
+      /* Change styles for span on extra small screens */
+      @media screen and (max-width: 300px) {
+      span.psw {
+      display: block;
+      float: none;
+      }
+      }
+    </style>
+  </head>
+  <body>
+      <!--! CHANGE LINK DEPENDING ON HOSTING SERVER  -->
+    <form action="/api/teams" method="POST">
+
+      <h1>TEAM SIGN UP</h1>
+      <div class="icon">
+        <i class="fas fa-user-circle"></i>
+      </div>
+      <div class="formcontainer">
+      <div class="container">
+
+        <label for="teamName"><strong>Team Name</strong></label>
+        <input type="text" placeholder="Enter Username" name="teamName" required>
+
+        <!-- CAPTAIN INFO -->
+        <label for="captainName"><strong>Captain Name</strong></label>
+        <input type="text" placeholder="Enter Username" name="captainName" required>
+
+        <label for="captainSurname"><strong>Captain Surname</strong></label>
+        <input type="text" placeholder="Enter Username" name="captainSurname" required>
+
+        <label for="captainGrade"><strong>Captain Grade</strong></label>
+        <input type="text" placeholder="Enter Username" name="captainGrade" required>
+
+        <label for="captainMail"><strong>E-mail</strong></label>
+        <input type="text" placeholder="Enter E-mail" name="captainMail" required>
+
+        <label for="captainDepartment"><strong>Captain Department</strong></label>
+        <input type="text" placeholder="Enter Username" name="captainDepartment" required>
+
+
+        <!-- FIRST MEMBER INFO -->
+        <label for="firstMemName"><strong>First Member Name</strong></label>
+        <input type="text" placeholder="Enter Username" name="firstMemName" required>
+
+        <label for="firstMemSurname"><strong>First Member Surname</strong></label>
+        <input type="text" placeholder="Enter Username" name="firstMemSurname" required>
+
+        <label for="firstMemGrade"><strong>first Member Grade</strong></label>
+        <input type="text" placeholder="Enter Username" name="firstMemGrade" required>
+
+        <label for="firstMemMail"><strong>E-mail</strong></label>
+        <input type="text" placeholder="Enter E-mail" name="firstMemMail" required>
+
+        <label for="firstMemDepartment"><strong>first Member Department</strong></label>
+        <input type="text" placeholder="Enter Username" name="firstMemDepartment" required>
+
+        <!-- FIRST MEMBER INFO -->
+        <label for="secondMemName"><strong>Second Member Name</strong></label>
+        <input type="text" placeholder="Enter Username" name="secondMemName" required>
+
+        <label for="secondMemSurname"><strong>Second Member Surname</strong></label>
+        <input type="text" placeholder="Enter Username" name="secondMemSurname" required>
+
+        <label for="secondMemGrade"><strong>second Member Grade</strong></label>
+        <input type="text" placeholder="Enter Username" name="secondMemGrade" required>
+
+        <label for="secondMemMail"><strong>E-mail</strong></label>
+        <input type="text" placeholder="Enter E-mail" name="secondMemMail" required>
+
+        <label for="secondMemDepartment"><strong>second Member Department</strong></label>
+        <input type="text" placeholder="Enter Username" name="secondMemDepartment" required>
+
+        <label for="codeForcesHandler"><strong>Codeforces Handler</strong></label>
+        <input type="text" placeholder="Enter Handler" name="codeForcesHandler" required>
+      </div>
+
+      <button type="submit"><strong>SIGN UP</strong></button>
+    </form>
+    <!-- teamName: {type: String, required: true},
+    captainMemName: {type: String, required: true},
+    firstMemName: {type: String, required: true},
+    secondMemName: {type: String, required: true},
+    captainMemSurname: {type: String, required: true},
+    firstMemSurname: {type: String, required: true},
+    secondMemSurname: {type: String, required: true},
+    captainGrade: {type: String, required: true},
+    firstMemGrade: {type: String, required: true},
+    secondMemGrade: {type: String, required: true},
+    captainMail: {type: String, required: true},
+    firstMemMail: {type: String, required: true},
+    secondMemMail: {type: String, required: true},
+    captainDepartment: {type: String, required: true},
+    firstMemDepartment: {type: String, required: true},
+    secondMemDepartment: {type: String, required: true},
+    codeForcesHandler: {type: String, required: true} -->
+    <script>
+
+    </script>
+  </body>
+</html>

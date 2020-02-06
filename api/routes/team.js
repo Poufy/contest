@@ -6,7 +6,7 @@ const Team = require("../models/Team");
 
 router.get("/", (req, res, next) => {
   Team.find()
-    .select("-__v -_id ")
+    .select("-__v")
     .exec()
     .then(entries => {
       res.status(200).json(entries);
@@ -23,10 +23,10 @@ router.post("/", (req, res, next) => {
   const newTeam = new Team({
     _id: new mongoose.Types.ObjectId(),
     teamName: req.body.teamName,
-      captainMemName: req.body.captainMemName,
+      captainName: req.body.captainName,
       firstMemName: req.body.firstMemName,
       secondMemName: req.body.secondMemName,
-      captainMemSurname: req.body.captainMemSurname,
+      captainSurname: req.body.captainSurname,
       firstMemSurname: req.body.firstMemSurname,
       secondMemSurname: req.body.secondMemSurname,
       captainGrade: req.body.captainGrade,
@@ -55,23 +55,23 @@ router.post("/", (req, res, next) => {
     });
 });
 
-// router.delete("/:entryId", (req, res, next) => {
-//     const subject = req.params.entryId;
-//     Team.remove({ subject: subject })
-//       .exec()
-//       .then(result => {
-//         res.status(200).json({
-// 	result: result,
-//           message: "Word deleted"
-//         });
-//       })
-//       .catch(err => {
-//         console.log(err);
-//         res.status(500).json({
-//           error: err
-//         });
-//       });
-//     });
+router.delete("/:entryId", (req, res, next) => {
+    const subject = req.params.entryId;
+    Team.remove({ subject: subject })
+      .exec()
+      .then(result => {
+        res.status(200).json({
+	result: result,
+          message: "Team deleted"
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({
+          error: err
+        });
+      });
+    });
 // router.patch("/:actionId", (req, res, next) => {
 
 //     const id = req.params.actionId;

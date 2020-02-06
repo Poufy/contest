@@ -3,10 +3,10 @@ const mongoose = require("mongoose");
 const teamSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     teamName: {type: String, required: true},
-    captainMemName: {type: String, required: true},
+    captainName: {type: String, required: true},
     firstMemName: {type: String, required: true},
     secondMemName: {type: String, required: true},
-    captainMemSurname: {type: String, required: true},
+    captainSurname: {type: String, required: true},
     firstMemSurname: {type: String, required: true},
     secondMemSurname: {type: String, required: true},
     captainGrade: {type: String, required: true},
