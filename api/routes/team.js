@@ -38,14 +38,16 @@ router.post("/", (req, res, next) => {
       captainDepartment: req.body.captainDepartment,
       firstMemDepartment: req.body.firstMemDepartment,
       secondMemDepartment: req.body.secondMemDepartment,
-      codeForcesHandler: req.body.codeForcesHandler
+      codeForcesHandler: req.body.codeForcesHandler,
+      favProgrammingLanguage:req.body.favProgrammingLanguage,
+    favIDE: req.body.favIDE,
+    lvlOfKnowledge: req.body.lvlOfKnowledge,
+    motivation: req.body.motivation
   });
   newTeam
     .save()
     .then(result => {
-      res.status(201).json({
-        message: "Created entry successfully"
-      });
+      res.redirect("/success")
     })
     .catch(err => {
       console.log(err);

@@ -18,7 +18,11 @@ const teamSchema = mongoose.Schema({
     captainDepartment: {type: String, required: true},
     firstMemDepartment: {type: String, required: true},
     secondMemDepartment: {type: String, required: true},
-    codeForcesHandler: {type: String, required: true}
+    codeForcesHandler: {type: String, required: true},
+    favProgrammingLanguage:{type: String, required: true},
+    favIDE: {type: String, required: true},
+    lvlOfKnowledge: {type: String, required: true},
+    motivation: {type: String, required: true}
 })
 
 module.exports = mongoose.model("Team",  teamSchema)

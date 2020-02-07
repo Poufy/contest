@@ -14,7 +14,7 @@
       form {
       border: 5px solid #f1f1f1;
       }
-      input[type=text], input[type=password] {
+      input[type=text], input[type=password], select {
       width: 100%;
       padding: 16px 8px;
       margin: 8px 0;
@@ -64,6 +64,7 @@
       float: none;
       }
       }
+      
     </style>
   </head>
   <body>
@@ -74,10 +75,11 @@
       <div class="icon">
         <i class="fas fa-user-circle"></i>
       </div>
+      <p style="padding-top: 2rem; text-align: center;"><span style="color: red;">Note</span>: If you do not have a team and are looking for one, you can register through this <a href="#">link</a></p>
       <div class="formcontainer">
       <div class="container">
 
-        <label for="teamName"><strong>Team Name</strong></label>
+        <label for="teamName"><strong>Team Name</strong> (Please create an account with the desired team name on codeforces.com) </label>
         <input type="text" placeholder="Enter Username" name="teamName" required>
 
         <!-- CAPTAIN INFO -->
@@ -129,29 +131,48 @@
         <label for="secondMemDepartment"><strong>second Member Department</strong></label>
         <input type="text" placeholder="Enter Username" name="secondMemDepartment" required>
 
+        <!-- MISC -->
+        <label for="favProgrammingLanguage"><strong>Favorable Programming Language</strong></label>
+        <!-- <input type="text" placeholder="Enter Handler" name="favProgrammingLanguage" required> -->
+          <select id="languages" name="favProgrammingLanguage">
+            <option value="C++">C++</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+          </select>
+
+        <label for="favIDE"><strong>Favorable IDE</strong></label>
+        <!-- <input type="text" placeholder="Enter Handler" name="favIDE" required> -->
+        <select id="Ides" name="favIDE">
+          <option value="sublime">Sublime Text</option>
+          <option value="cb">Code Blocks</option>
+          <option value="ec">Eclipse</option>
+          <option value="pc">Pycharm</option>
+        </select>
+
+        <label for="lvlOfKnowledge"><strong>Level of Knowledge</strong></label>
+        <!-- <input type="text" placeholder="Enter Handler" name="lvlOfKnowledge" required> -->
+        <select id="lvl" name="lvlOfKnowledge">
+          <option value="beginner">Total Beginner</option>
+          <option value="lowerinter">Lower Intermediate (I know some algorithms)</option>
+          <option value="upperinter">Upper Intermediate (I know several algorithms and solved several problems)</option>
+          <option value="Advanced">Advanced (I know many algorithms and solved many problems)</option>
+        </select>
+
         <label for="codeForcesHandler"><strong>Codeforces Handler</strong></label>
         <input type="text" placeholder="Enter Handler" name="codeForcesHandler" required>
+
+        <label for="motivation"><strong>Motivation to participate in the contest</strong></label>
+        <!-- <input type="text" placeholder="Enter Handler" name="motivation" required> -->
+        <br>
+        <textarea name="motivation" cols="80" rows="5" required></textarea>
       </div>
 
       <button type="submit"><strong>SIGN UP</strong></button>
     </form>
-    <!-- teamName: {type: String, required: true},
-    captainMemName: {type: String, required: true},
-    firstMemName: {type: String, required: true},
-    secondMemName: {type: String, required: true},
-    captainMemSurname: {type: String, required: true},
-    firstMemSurname: {type: String, required: true},
-    secondMemSurname: {type: String, required: true},
-    captainGrade: {type: String, required: true},
-    firstMemGrade: {type: String, required: true},
-    secondMemGrade: {type: String, required: true},
-    captainMail: {type: String, required: true},
-    firstMemMail: {type: String, required: true},
-    secondMemMail: {type: String, required: true},
-    captainDepartment: {type: String, required: true},
-    firstMemDepartment: {type: String, required: true},
-    secondMemDepartment: {type: String, required: true},
-    codeForcesHandler: {type: String, required: true} -->
+    <!-- favProgrammingLanguage:{type: String, required: true},
+    favIDE: {type: String, required: true},
+    lvlOfKnowledge: {type: String, required: true},
+    motiviation: {type: String, required: true} -->
     <script>
 
     </script>

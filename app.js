@@ -47,6 +47,9 @@ app.use((req, res, next) => {
 app.get('/',function(req,res) {
   res.sendFile(__dirname + '/index.html');
 });
+app.get('/success',function(req,res) {
+  res.sendFile(__dirname + '/success.html');
+});
 app.use("/api/teams" , teamRoute);
 
 //if you reach this line that means no router in products or orders was able to handle the request therefore we catch an error here
