@@ -69,23 +69,23 @@ router.post("/", (req, res, next) => {
     });
 });
 
-router.delete("/:entryId", (req, res, next) => {
-  const subject = req.params.entryId;
-  Team.remove({ subject: subject })
-    .exec()
-    .then(result => {
-      res.status(200).json({
-        result: result,
-        message: "Team deleted"
-      });
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json({
-        error: err
-      });
-    });
-});
+// router.delete("/:entryId", (req, res, next) => {
+//   const subject = req.params.entryId;
+//   Team.remove({ subject: subject })
+//     .exec()
+//     .then(result => {
+//       res.status(200).json({
+//         result: result,
+//         message: "Team deleted"
+//       });
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json({
+//         error: err
+//       });
+//     });
+// });
 // router.patch("/:actionId", (req, res, next) => {
 
 //     const id = req.params.actionId;

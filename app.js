@@ -25,7 +25,12 @@ app.use(morgan("dev"));
 
 //Retaining sessions.
 app.use(cookieParser("secret"));
-app.use(session({ cookie: { maxAge: 60000 } }));
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}));
 app.use(flash());
 
 //This is like body-parser.urlencoded which allows us to extract data from requests as they come
