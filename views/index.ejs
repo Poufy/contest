@@ -69,16 +69,19 @@
   </head>
   <body>
       <!--! CHANGE LINK DEPENDING ON HOSTING SERVER  -->
-    <form action="/api/teams" method="POST">
+    <form action="/api/teams" method="POST" id="form">
 
       <h1>TEAM SIGN UP</h1>
+      
       <div class="icon">
         <i class="fas fa-user-circle"></i>
       </div>
       <p style="padding-top: 2rem; text-align: center;"><span style="color: red;">Note</span>: If you do not have a team and are looking for one, you can register through this <a href="#">link</a></p>
       <div class="formcontainer">
       <div class="container">
-
+        <% if ( expressFlash.length > 0 ) { %>
+            <p><span style="color:red">Error: <%= expressFlash %> </span></p>
+          <% } %>
         <label for="teamName"><strong>Team Name</strong> (Please create an account with the desired team name on codeforces.com) </label>
         <input type="text" placeholder="Enter Username" name="teamName" required>
 
@@ -173,7 +176,10 @@
     favIDE: {type: String, required: true},
     lvlOfKnowledge: {type: String, required: true},
     motiviation: {type: String, required: true} -->
+
+
     <script>
+//check if the name exists otherwise add the team
 
     </script>
   </body>
